@@ -1,0 +1,272 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+
+      font-family: 'Inter', sans-serif;
+      background-color: #fef9f0;
+      color: #2c2b28;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* container principal */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* HEADER / HERO */
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 650px;
+      margin: 0 auto;
+      opacity: 0.95;
+      font-weight: 400;
+    }
+    .hero .badge {
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(4px);
+      display: inline-block;
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      margin-top: 24px;
+      font-weight: 500;
+    }
+
+    /* grille excursions */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 32px;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 12px;
+      border-bottom: 4px solid #e7b42c;
+    }
+    .excursions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 40px;
+      margin: 40px 0 60px;
+    }
+    .card {
+      background: white;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 30px 40px -15px rgba(0,0,0,0.15);
+    }
+    .card-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .card-content {
+      padding: 24px 24px 28px;
+    }
+    .card h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #c45c1a;
+    }
+    .card p {
+      color: #4b4a47;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+    .btn-savoir {
+      background: none;
+      border: 2px solid #e7b42c;
+      color: #c45c1a;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 40px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-savoir i {
+      font-size: 0.8rem;
+      transition: transform 0.2s;
+    }
+    .btn-savoir:hover {
+      background: #e7b42c;
+      color: #2c2b28;
+      border-color: #e7b42c;
+    }
+    .btn-savoir:hover i {
+      transform: translateX(4px);
+    }
+
+    /* MODAL (fenêtre) */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.75);
+      backdrop-filter: blur(5px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0.2s, opacity 0.2s;
+    }
+    .modal-overlay.active {
+      visibility: visible;
+      opacity: 1;
+    }
+    .modal-container {
+      background-color: #fffef7;
+      width: 90%;
+      max-width: 680px;
+      border-radius: 48px;
+      overflow: hidden;
+      box-shadow: 0 30px 50px rgba(0,0,0,0.3);
+      transform: scale(0.96);
+      transition: transform 0.25s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .active .modal-container {
+      transform: scale(1);
+    }
+    .modal-header {
+      display: flex;
+      justify-content: flex-end;
+      padding: 16px 20px 0;
+    }
+    .close-modal {
+      background: #f0ede5;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .close-modal:hover {
+      background: #e2d9cc;
+    }
+    .modal-body {
+      padding: 0 24px 28px 24px;
+      overflow-y: auto;
+    }
+    /* grande image arrondie */
+    .main-modal-img {
+      width: 100%;
+      border-radius: 32px;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    /* miniatures : petites images en bas de la grande image */
+    .thumbnail-gallery {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+    .thumb {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.2s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .thumb:hover {
+      transform: scale(1.05);
+      border-color: #e7b42c;
+    }
+    .thumb.active-thumb {
+      border-color: #c45c1a;
+      box-shadow: 0 0 0 2px #ffd966;
+    }
+    .modal-description {
+      font-size: 1rem;
+      margin-top: 12px;
+      color: #2e2c29;
+      line-height: 1.5;
+    }
+    .modal-description h4 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: #c45c1a;
+    }
+    /* section témoignages rapide */
+    .testimonials {
+      background: #fff3e2;
+      border-radius: 48px;
+      padding: 40px 32px;
+      margin: 70px 0;
+      text-align: center;
+    }
+    .testi-grid {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 28px;
+    }
+    .testi-card {
+      background: white;
+      border-radius: 32px;
+      padding: 24px;
+      max-width: 280px;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+    }
+    .testi-card i {
+      color: #e7b42c;
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+    footer {
+      text-align: center;
+      padding: 32px;
+      border-top: 1px solid #efe3d0;
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: #6b6257;
+    }
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 2.2rem; }
+      .container { padding: 0 20px; }
+      .thumb { width: 65px; height: 65px; border-radius: 16px; }
+      .modal-body { padding: 0 16px 24px; }
+    }

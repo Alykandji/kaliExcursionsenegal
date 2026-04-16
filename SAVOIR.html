@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Excursions Teranga Sénégal | Authenticité & Aventure</title>
+  <!-- Google Fonts pour une typographie élégante -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (gratuit) pour icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="savoi.css">
+  <style>
+   
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <h1>KaliExcursionsSénégal</h1>
+    <p>L'authenticité au cœur du voyage — Guide local & expériences uniques</p>
+    <div class="badge"><i class="fas fa-hand-peace"></i> Teranga spirit • circuits sur mesure</div>
+  </div>
+</section>
+
+<div class="container">
+  <h2 class="section-title">Nos excursions authentiques</h2>
+  <div class="excursions-grid" id="excursionsGrid"></div>
+</div>
+
+<div class="container">
+  <div class="testimonials">
+    <i class="fas fa-quote-right" style="font-size: 2.5rem; color:#c67c2e; opacity:0.5;"></i>
+    <h3 style="font-size: 1.8rem; margin: 12px 0;">Ce que nos voyageurs disent</h3>
+    <div class="testi-grid">
+      <div class="testi-card"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p>"Une immersion incroyable dans les îles du Saloum. Guide passionné et paysages à couper le souffle."</p><strong>- Marie, Lyon</strong></div>
+      <div class="testi-card"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p>"L'excursion à Gorée m'a profondément touchée. Organisation parfaite et équipe aux petits soins."</p><strong>- David, Montréal</strong></div>
+      <div class="testi-card"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p>"Safari à Bandia: nous avons vu des girafes, rhinos! Un moment magique en famille."</p><strong>- Sophie, Paris</strong></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Excursions Teranga Sénégal — Authenticité, partage et découverte <br> 
+  <i class="fas fa-map-marker-alt"></i> Dakar, Sénégal | <i class="fas fa-phone-alt"></i> +221 77 123 45 67</p>
+</footer>
+
+<!-- MODALE UNIQUE (fenêtre) -->
+<div id="excursionModal" class="modal-overlay">
+  <div class="modal-container">
+    <div class="modal-header">
+      <button class="close-modal" id="closeModalBtn"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body">
+      <!-- grande image avec bord arrondi -->
+      <img id="modalMainImage" class="main-modal-img" src="" alt="Image principale excursion">
+      <!-- conteneur des petites images (miniatures) -->
+      <div id="thumbnailContainer" class="thumbnail-gallery"></div>
+      <!-- titre et description dynamiques -->
+      <div class="modal-description">
+        <h4 id="modalTitle"></h4>
+        <p id="modalDesc"></p>
+        <p style="margin-top: 12px;"><i class="fas fa-clock"></i> Durée: <span id="modalDuration"></span> &nbsp;|&nbsp; <i class="fas fa-users"></i> Disponible en groupe ou privé</p>
+        <button class="btn-savoir" style="margin-top: 16px; background:#e7b42c20;" onclick="alert('Merci de votre intérêt ! Contactez-nous pour réserver cette excursion.')"><i class="fas fa-calendar-check"></i> Demander un devis</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ------------------------------------------------------------------
+  // Données des excursions (inspirées du site source + enrichies)
+  // Chaque excursion possède : titre, description courte, grande image, 
+  // une liste de miniatures (urls, alt), durée, et description longue modale.
+  // ------------------------------------------------------------------
+  const excursionsData = [
+    {
+      id: 1,
+      title: "Journée Dakar – Île de Gorée",
+      shortDesc: "Plongez dans l’histoire entre mémoire, culture et patrimoine vivant.",
+      mainImage: "55.jpg",   // paysage sénégal (placeholder)
+      thumbnails: [
+      '55.jpg',
+      '10.jpeg',
+      '5.jpeg',
+      '30.jpeg',
+      '35.jpeg',
+      ],
+      duration: "Journée complète (8h)",
+      longDescription: "Traversez l’histoire poignante de l’île de Gorée, visitez la Maison des Esclaves, flânez dans les ruelles colorées et découvrez le patrimoine colonial. Accompagné par un guide passionné, vivez un moment d’émotion et de partage unique au Sénégal. Déjeuner typique inclus."
+    },
+    {
+      id: 2,
+      title: "Journée aux Îles du Saloum",
+      shortDesc: "Explorez mangroves, villages traditionnels et nature préservée en pirogue.",
+      mainImage: "47.jpeg",
+      thumbnails: [
+      '47.jpeg',
+      '3.jpeg',
+      '14.jpeg',
+      '28.jpeg',
+      '36.jpeg',
+      ],
+      duration: "Excursion 10h",
+      longDescription: "Départ matinal pour le delta du Saloum, balade en pirogue à travers les mangroves, rencontre avec les communautés locales, dégustation d’huîtres et pause sur une île préservée. Un véritable voyage au cœur de la nature sénégalaise."
+    },
+    {
+      id: 3,
+      title: "Arrivée des pêcheurs de M’bour",
+      shortDesc: "Vivez une scène authentique du quotidien sénégalais entre mer et traditions.",
+      mainImage: "59.jpg",
+      thumbnails: [
+      '60.jpg',
+      '61.jpg',
+      '62.jpg',
+      '63.jpg',
+
+      ],
+      duration: "Matinée (4h)",
+      longDescription: "Assistez au retour des pirogues de pêche, à la criée haute en couleurs, échangez avec les pêcheurs artisans. Plongez dans l’ambiance unique de la Petite Côte et dégustez des fruits de mer frais."
+    },
+    {
+      id: 4,
+      title: "Excursion Île aux Coquillages",
+      shortDesc: "Un site unique mêlant spiritualité, histoire et architecture naturelle.",
+      mainImage: "64.jpg",
+      thumbnails: [
+      '64.jpg',
+      '65.jpg',
+      '66.jpg',
+      '67.jpg',
+      '68.jpg',
+      ],
+      duration: "Demi-journée",
+      longDescription: "L’île de Fadiouth, entièrement constituée de coquillages, reliée par une passerelle. Découvrez le cimetière mixte chrétien-musulman, l’artisanat local et la sérénité des lieux. Une expérience hors du commun."
+    },
+    {
+      id: 5,
+      title: "Safari Bandia & Ranch des Lions",
+      shortDesc: "Observez la faune africaine lors d’un safari sécurisé et spectaculaire.",
+      mainImage: "1.jpeg",
+      thumbnails: [
+      '8.jpeg',
+      '53.jpeg',
+      '24.jpeg',
+      '33.jpeg',
+      '21.jpeg',
+      '49.jpeg',
+      '48.jpeg',
+      ],
+      duration: "Journée safari (7h)",
+      longDescription: "À 1h de Dakar, partez en safari 4x4 dans la réserve de Bandia : girafes, rhinocéros, zèbres, antilopes et bien d’autres. Optionnel : visite du ranch des lions. Idéal pour les familles et amoureux de nature."
+    },
+    {
+      id: 6,
+      title: "Saint-Louis & Désert de Lompoul",
+      shortDesc: "Circuit complet entre ville coloniale, dunes dorées et nuit étoilée.",
+      mainImage: "57.webp",
+      thumbnails: [
+      '42.jpeg',
+      '46.jpeg',
+      '39.jpeg',
+      '22.jpeg',
+      '69.jpg',
+      '70.jpg',
+      '14.jpeg',
+      ],
+      duration: "2 jours / 1 nuit",
+      longDescription: "Découvrez Saint-Louis, patrimoine mondial de l’UNESCO, ses ruelles et son pont Faidherbe, puis aventure dans le désert de Lompoul : balade en dromadaire, coucher de soleil sur les dunes et nuit sous tente traditionnelle."
+    }
+  ];
+
+  // Récupération du DOM
+  const excursionsGrid = document.getElementById('excursionsGrid');
+  const modalOverlay = document.getElementById('excursionModal');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+  const modalMainImage = document.getElementById('modalMainImage');
+  const thumbnailContainer = document.getElementById('thumbnailContainer');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDesc = document.getElementById('modalDesc');
+  const modalDurationSpan = document.getElementById('modalDuration');
+
+  // fonction pour fermer la modale
+  function closeModal() {
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // réactive scroll
+  }
+
+  function openModal(excursion) {
+    // Remplir grande image
+    modalMainImage.src = excursion.mainImage;
+    modalMainImage.alt = excursion.title;
+    modalTitle.innerText = excursion.title;
+    modalDesc.innerText = excursion.longDescription;
+    modalDurationSpan.innerText = excursion.duration;
+    
+    // Générer les miniatures (petites images en bas de l'image)
+    thumbnailContainer.innerHTML = '';
+    if (excursion.thumbnails && excursion.thumbnails.length) {
+      excursion.thumbnails.forEach((thumbUrl, idx) => {
+        const thumbImg = document.createElement('img');
+        thumbImg.src = thumbUrl;
+        thumbImg.alt = `Miniature ${idx+1} - ${excursion.title}`;
+        thumbImg.classList.add('thumb');
+        // Au clic sur une miniature => changer la grande image
+        thumbImg.addEventListener('click', (e) => {
+          e.stopPropagation();
+          modalMainImage.src = thumbUrl;
+          // Retirer la classe active de toutes les miniatures et l'ajouter sur celle-ci
+          document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active-thumb'));
+          thumbImg.classList.add('active-thumb');
+        });
+        thumbnailContainer.appendChild(thumbImg);
+      });
+      // option: mettre la première miniature en active par défaut (pas obligatoire mais joli)
+      if(thumbnailContainer.children[0]) {
+        thumbnailContainer.children[0].classList.add('active-thumb');
+      }
+    } else {
+      // fallback si aucune miniature (au cas où) : on peut afficher un message ou images génériques
+      const placeholderMsg = document.createElement('div');
+      placeholderMsg.innerText = "📸 Galerie d'images disponible sur demande";
+      placeholderMsg.style.fontSize = "0.8rem";
+      placeholderMsg.style.padding = "8px";
+      thumbnailContainer.appendChild(placeholderMsg);
+    }
+    
+    // Afficher la modale
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // empêche scroll arrière
+  }
+
+  // générer les cartes d'excursions
+  function buildCards() {
+    excursionsGrid.innerHTML = '';
+    excursionsData.forEach(exp => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      
+      // image de la carte (on prend la même que la grande image ou une miniature)
+      const imgCard = document.createElement('img');
+      imgCard.src = exp.mainImage;
+      imgCard.alt = exp.title;
+      imgCard.className = 'card-img';
+      
+      const contentDiv = document.createElement('div');
+      contentDiv.className = 'card-content';
+      
+      const titleEl = document.createElement('h3');
+      titleEl.innerText = exp.title;
+      
+      const shortDescP = document.createElement('p');
+      shortDescP.innerText = exp.shortDesc;
+      
+      const btn = document.createElement('button');
+      btn.className = 'btn-savoir';
+      btn.innerHTML = 'En savoir plus <i class="fas fa-arrow-right"></i>';
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal(exp);
+      });
+      
+      contentDiv.appendChild(titleEl);
+      contentDiv.appendChild(shortDescP);
+      contentDiv.appendChild(btn);
+      card.appendChild(imgCard);
+      card.appendChild(contentDiv);
+      excursionsGrid.appendChild(card);
+    });
+  }
+  
+  // Événement pour fermer la modale : bouton close, clic sur overlay
+  closeModalBtn.addEventListener('click', closeModal);
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) closeModal();
+  });
+  // Échap pour fermer
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+      closeModal();
+    }
+  });
+  
+  // Lancer la construction
+  buildCards();
+  
+  // Petite animation de bienvenue console (sympa)
+  console.log("✨ Excursions Teranga Sénégal — fenêtre modale avec galerie d'images arrondies prête !");
+</script>
+</body>
+</html>

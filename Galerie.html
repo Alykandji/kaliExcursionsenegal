@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galerie Photos – Teranga Voyages Sénégal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="galerie.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span>📞 +221 77 451 98 66</span>
+      <span>✉️ contact@terangavoyages.sn</span>
+      <span>📍 Thiès · Somone · Sénégal</span>
+    </div>
+    <div class="topbar-socials">
+      <a href="#" aria-label="Facebook">FB</a>
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="WhatsApp">WA</a>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-brand">
+       <img src="logo.png" alt="logo" width="50px">
+      <span class="brand-icon">✦</span>
+      <span class="brand-name">KaliExcursions<span>Sénégal</span></span>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="nav-link">Accueil</a></li>
+      <li><a href="Excursion.html" class="nav-link">Excursions</a></li>
+      <li><a href="Circuit.html" class="nav-link">Circuits</a></li>
+      <li><a href="Galerie.html" class="nav-link active">Galerie</a></li>
+      <li><a href="index.html#apropos" class="nav-link">À propos</a></li>
+      <li><a href="contact.html" class="nav-link btn-contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO GALERIE -->
+  <header class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1600&q=80')"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="section-tag">Photos & Souvenirs</span>
+      <h1>Notre <em>Galerie</em></h1>
+      <p>Plongez dans la beauté du Sénégal à travers nos instants capturés</p>
+    </div>
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="index.html">Accueil</a>
+      <span>›</span>
+      <span>Galerie</span>
+    </nav>
+  </header>
+
+  
+
+  <!-- GRILLE GALERIE 4 COLONNES -->
+  <main class="gallery-page-wrap">
+    <div class="gallery-4col" id="gallery-grid">
+
+      <!-- Nature -->
+      <div class="gal-item" data-category="nature" data-title="Mangroves du Sine-Saloum" data-desc="Les mangroves préservées du delta du Saloum">
+        <div class="gal-img" style="background-image:url('1.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Culture -->
+      <div class="gal-item" data-category="culture" data-title="Île de Gorée" data-desc="La maison des esclaves, mémoire de l'histoire">
+        <div class="gal-img" style="background-image:url('2.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Réserve de Bandia" data-desc="Girafes en liberté dans la savane sénégalaise">
+        <div class="gal-img" style="background-image:url('3.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Mer -->
+      <div class="gal-item" data-category="mer" data-title="Plage de Somone" data-desc="Eaux turquoise et sable doré de la Petite Côte">
+        <div class="gal-img" style="background-image:url('4.jpg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Désert -->
+      <div class="gal-item" data-category="desert" data-title="Dunes de Lompoul" data-desc="Le seul désert de sable d'Afrique de l'Ouest">
+        <div class="gal-img" style="background-image:url('5.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Culture -->
+      <div class="gal-item" data-category="culture" data-title="Saint-Louis Coloniale" data-desc="Architecture coloniale de l'ancienne capitale">
+        <div class="gal-img" style="background-image:url('6.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Villages -->
+      <div class="gal-item" data-category="villages" data-title="Village de Pêcheurs" data-desc="Vie authentique sur la côte sénégalaise">
+        <div class="gal-img" style="background-image:url('7.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Nature -->
+      <div class="gal-item" data-category="nature" data-title="Baobabs Sénégalais" data-desc="Les géants centenaires de la savane">
+        <div class="gal-img" style="background-image:url('8.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Mer -->
+      <div class="gal-item" data-category="mer" data-title="Pêcheurs de M'bour" data-desc="Arrivée des pirogues au lever du soleil">
+        <div class="gal-img" style="background-image:url('9.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Ranch des Lions" data-desc="Lions en semi-liberté dans la savane">
+        <div class="gal-img" style="background-image:url('10.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Culture -->
+      <div class="gal-item" data-category="culture" data-title="Marché de Thiès" data-desc="Couleurs et senteurs du marché local">
+        <div class="gal-img" style="background-image:url('11.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Désert -->
+      <div class="gal-item" data-category="desert" data-title="Coucher de Soleil Lompoul" data-desc="Magie du soleil couchant sur les dunes dorées">
+        <div class="gal-img" style="background-image:url('12.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Villages -->
+      <div class="gal-item" data-category="villages" data-title="Île de Mar Lodj" data-desc="Village traditionnel sans voitures au Sine-Saloum">
+        <div class="gal-img" style="background-image:url('13.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Nature -->
+      <div class="gal-item" data-category="nature" data-title="Flamants Roses" data-desc="Les flamants roses de la Langue de Barbarie">
+        <div class="gal-img" style="background-image:url('14.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Mer -->
+      <div class="gal-item" data-category="mer" data-title="Pirogue au Saloum" data-desc="Navigation en pirogue dans le delta">
+        <div class="gal-img" style="background-image:url('15.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('17.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+            <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('18.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('19.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('20.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Nature -->
+      <div class="gal-item" data-category="nature" data-title="Mangroves du Sine-Saloum" data-desc="Les mangroves préservées du delta du Saloum">
+        <div class="gal-img" style="background-image:url('21.jpeg')"></div>
+          <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Culture -->
+      <div class="gal-item" data-category="culture" data-title="Île de Gorée" data-desc="La maison des esclaves, mémoire de l'histoire">
+        <div class="gal-img" style="background-image:url('22.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Réserve de Bandia" data-desc="Girafes en liberté dans la savane sénégalaise">
+        <div class="gal-img" style="background-image:url('23.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+      <div class="gal-item" data-category="mer" data-title="Plage de Somone" data-desc="Eaux turquoise et sable doré de la Petite Côte">
+        <div class="gal-img" style="background-image:url('24.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+      <div class="gal-item" data-category="desert" data-title="Dunes de Lompoul" data-desc="Le seul désert de sable d'Afrique de l'Ouest">
+        <div class="gal-img" style="background-image:url('25.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+      <div class="gal-item" data-category="culture" data-title="Saint-Louis Coloniale" data-desc="Architecture coloniale de l'ancienne capitale">
+        <div class="gal-img" style="background-image:url('26.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+      <div class="gal-item" data-category="villages" data-title="Village de Pêcheurs" data-desc="Vie authentique sur la côte sénégalaise">
+        <div class="gal-img" style="background-image:url('27.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+      <div class="gal-item" data-category="nature" data-title="Baobabs Sénégalais" data-desc="Les géants centenaires de la savane">
+        <div class="gal-img" style="background-image:url('28.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+      <div class="gal-item" data-category="mer" data-title="Pêcheurs de M'bour" data-desc="Arrivée des pirogues au lever du soleil">
+        <div class="gal-img" style="background-image:url('29.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+      <div class="gal-item" data-category="safari" data-title="Ranch des Lions" data-desc="Lions en semi-liberté dans la savane">
+        <div class="gal-img" style="background-image:url('30.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+      <div class="gal-item" data-category="culture" data-title="Marché de Thiès" data-desc="Couleurs et senteurs du marché local">
+        <div class="gal-img" style="background-image:url('31.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+      <div class="gal-item" data-category="desert" data-title="Coucher de Soleil Lompoul" data-desc="Magie du soleil couchant sur les dunes dorées">
+        <div class="gal-img" style="background-image:url('32.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+      <div class="gal-item" data-category="villages" data-title="Île de Mar Lodj" data-desc="Village traditionnel sans voitures au Sine-Saloum">
+        <div class="gal-img" style="background-image:url('33.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+      <div class="gal-item" data-category="nature" data-title="Flamants Roses" data-desc="Les flamants roses de la Langue de Barbarie">
+        <div class="gal-img" style="background-image:url('34.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+      <div class="gal-item" data-category="mer" data-title="Pirogue au Saloum" data-desc="Navigation en pirogue dans le delta">
+        <div class="gal-img" style="background-image:url('35.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('37.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('38.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('39.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('40.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+
+            <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('41.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+            <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('42.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('43.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('44.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Nature -->
+      <div class="gal-item" data-category="nature" data-title="Flamants Roses" data-desc="Les flamants roses de la Langue de Barbarie">
+        <div class="gal-img" style="background-image:url('45.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Mer -->
+      <div class="gal-item" data-category="mer" data-title="Pirogue au Saloum" data-desc="Navigation en pirogue dans le delta">
+        <div class="gal-img" style="background-image:url('46.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('47.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+            <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('48.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('49.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('50.jpeg')"></div>
+        <div class="gal-overlay">
+          <span class="gal-cat">Safari</span>
+          <p class="gal-title">Éléphants de Bandia</p>
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+
+            <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('51.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+            <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('52.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('53.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+      <!-- Safari -->
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('54.jpeg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+            <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('55.jpg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+            <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('56.jpg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('57.webp')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+      <div class="gal-item" data-category="safari" data-title="Éléphants de Bandia" data-desc="Troupeau d'éléphants dans la réserve">
+        <div class="gal-img" style="background-image:url('58.jpg')"></div>
+        <div class="gal-overlay">
+          <button class="gal-zoom" aria-label="Agrandir">🔍</button>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <!-- MESSAGE SI AUCUN RÉSULTAT -->
+    <div class="no-results" id="no-results">
+      <p>Aucune photo dans cette catégorie.</p>
+    </div>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo agrandie">
+    <button class="lb-close" id="lb-close" aria-label="Fermer">✕</button>
+    <button class="lb-nav lb-prev" id="lb-prev" aria-label="Précédent">‹</button>
+    <button class="lb-nav lb-next" id="lb-next" aria-label="Suivant">›</button>
+    <div class="lb-content">
+      <div class="lb-img-wrap">
+        <img src="" alt="" id="lb-img" />
+        <div class="lb-loader" id="lb-loader"></div>
+      </div>
+      <div class="lb-info">
+        <span class="lb-cat" id="lb-cat"></span>
+        <h3 id="lb-title"></h3>
+        <p id="lb-desc"></p>
+        <div class="lb-counter" id="lb-counter"></div>
+      </div>
+    </div>
+  </div>
+  <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+         <img src="logo.png" alt="logo" width="50px">
+        <span class="brand-icon">✦</span>
+        <span class="brand-name">KaliExcursions<span>Sénégal</span></span>
+        <p>Excursions authentiques au Sénégal<br/>depuis Thiès et Somone</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html#accueil">Accueil</a></li>
+          <li><a href="index.html#excursions">Excursions</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="index.html#apropos">À propos</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Excursions</h4>
+        <ul>
+          <li><a href="index.html#excursions">Île de Gorée</a></li>
+          <li><a href="index.html#excursions">Sine-Saloum</a></li>
+          <li><a href="index.html#excursions">Désert Lompoul</a></li>
+          <li><a href="index.html#excursions">Safari Bandia</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>+221 77 451 98 66</p>
+        <p>contact@terangavoyages.sn</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Teranga Voyages – Tous droits réservés</p>
+       <P>LE SITE WEB A ETE CONCU PAR AK VISION TECH </P>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FAB -->
+  <a href="https://wa.me/221774519866" class="whatsapp-fab" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+  <script src="galerie.js"></script>
+</body>
+</html>

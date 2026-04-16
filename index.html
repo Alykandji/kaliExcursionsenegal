@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teranga Voyages – Excursions au Sénégal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span>📞 +221 77 614 76 34</span>
+      <span>✉️ kalidou.kandji.senegal@gmail.com </span>
+      <span>📍 Mbour · Somone · Sénégal</span>
+    </div>
+    <div class="topbar-socials">
+      <a href="#" aria-label="Facebook">FB</a>
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="WhatsApp">WA</a>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <img src="logo.png" alt="logo" width="50px">
+      <span class="brand-icon">✦</span>
+      <span class="brand-name">Kali<span>Excursions</span></span>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+      <li><a href="Excursion.html" class="nav-link">Excursions</a></li>
+      <li><a href="Circuit.html" class="nav-link">Circuits</a></li>
+      <li><a href="galerie.html" class="nav-link">Galerie</a></li>
+      <li><a href="#apropos" class="nav-link">À propos</a></li>
+      <li><a href="contact.html" class="nav-link btn-contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="accueil">
+    <div class="hero-bg">
+      <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1600&q=80')"></div>
+      <div class="hero-slide" style="background-image:url('3.jpeg')"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?w=1600&q=80')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Guide local professionnel</p>
+      <h1 class="hero-title">Découvrez le <em>Sénégal</em> autrement</h1>
+      <p class="hero-subtitle">Excursions authentiques & circuits sur mesure<br/>avec un guide certifié depuis Mbour et Somone</p>
+      <div class="hero-cta">
+        <a href="Excursion.html" class="btn-primary">Nos Excursions</a>
+        <a href="contact.html" class="btn-outline">Nous Contacter</a>
+      </div>
+    </div>
+    <div class="hero-dots" id="hero-dots"></div>
+    <div class="hero-scroll">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- STATS BAND -->
+  <div class="stats-band">
+    <div class="stat">
+      <span class="stat-num" data-target="500">0</span><span>+</span>
+      <p>Clients satisfaits</p>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-target="12">0</span>
+      <p>Destinations</p>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-target="8">0</span>
+      <p>Ans d'expérience</p>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-target="100">0</span><span>%</span>
+      <p>Avis positifs</p>
+    </div>
+  </div>
+
+  <!-- EXCURSIONS -->
+  <section class="section" id="excursions">
+    <div class="section-header">
+      <span class="section-tag">Nos offres</span>
+      <h2>Excursions au Sénégal</h2>
+      <p>Découvrez la richesse culturelle et naturelle du Sénégal à travers nos excursions soigneusement sélectionnées</p>
+    </div>
+    <div class="cards-grid">
+
+      <div class="card" data-aos>
+        <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=600&q=80')">
+          <span class="card-badge">Historique</span>
+        </div>
+        <div class="card-body">
+          <h3>Dakar & Île de Gorée</h3>
+          <p>Plongez dans l'histoire entre mémoire, culture et patrimoine vivant.</p>
+          <div class="card-meta">
+            <span>🕐 Journée</span>
+            <span>👥 Groupe</span>
+          </div>
+          <a href="EXcursion.html" class="card-btn">En savoir plus →</a>
+        </div>
+      </div>
+
+      <div class="card" data-aos>
+        <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?w=600&q=80')">
+          <span class="card-badge">Authentique</span>
+        </div>
+        <div class="card-body">
+          <h3>Pêcheurs de M'bour</h3>
+          <p>Vivez une scène authentique du quotidien sénégalais entre mer et traditions.</p>
+          <div class="card-meta">
+            <span>🕐 Demi-journée</span>
+            <span>🎣 Pêche</span>
+          </div>
+          <a href="EXcursion.html" class="card-btn">En savoir plus →</a>
+        </div>
+      </div>
+
+
+      
+      <div class="card" data-aos>
+        <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=80')">
+          <span class="card-badge">Patrimoine</span>
+        </div>
+        <div class="card-body">
+          <h3>Saint-Louis Coloniale</h3>
+          <p>Découvrez l'ancienne capitale du Sénégal, classée UNESCO, entre architecture et culture.</p>
+          <div class="card-meta">
+            <span>🕐 Journée</span>
+            <span>🏛️ UNESCO</span>
+          </div>
+          <a href="EXcursion.html" class="card-btn">En savoir plus →</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="section-cta">
+      <a href="Excursion.html" class="btn-primary">Voir toutes nos excursions</a>
+    </div>
+  </section>
+
+  <!-- ABOUT BAND -->
+  <section class="about-band" id="apropos">
+    <div class="about-img">
+      <img src="15.jpeg" alt="Guide au Sénégal" loading="lazy" />
+      <div class="about-badge-floating">
+        <span>✦</span>
+        <p>Guide certifié</p>
+        <strong>KALIDOU KANDJI</strong>
+      </div>
+    </div>
+    <div class="about-text">
+      <span class="section-tag">À propos</span>
+      <h2>L'authenticité<br/>avant tout</h2>
+      <p>Fondée par <strong>KALIDOU KANDJI</strong>, guide touristique professionnel agréé par l'État sénégalais, <em>Teranga Voyages</em> est une agence locale spécialisée dans les excursions et circuits touristiques à travers tout le Sénégal.</p>
+      <p>Grâce à notre parfaite connaissance du terrain, de la culture et des traditions locales, nous vous proposons des excursions bien organisées, conviviales et adaptées à tous : familles, couples, groupes ou voyageurs solo.</p>
+      <ul class="about-list">
+        <li>✔ Guide officiel certifié</li>
+        <li>✔ Petits groupes (max. 12 pers.)</li>
+        <li>✔ Transport confortable inclus</li>
+        <li>✔ Tarifs transparents sans surprises</li>
+      </ul>
+      <a href="#contact" class="btn-primary">Nous contacter</a>
+    </div>
+  </section>
+  <!-- AVIS -->
+  <section class="section" id="avis">
+    <div class="section-header">
+      <span class="section-tag">Témoignages</span>
+      <h2>Ce que disent nos clients</h2>
+    </div>
+    <div class="reviews-carousel" id="reviews-carousel">
+      <div class="review active">
+        <div class="stars">★★★★★</div>
+        <p>Trouvé via son site, il y a plusieurs mois, j'ai organisé pour un groupe de 15 amis plus d'une semaine d'excursions grace à son aide. Tout a été parfait. Ravis autant par ses qualités humaines que par ses qualités de guide ainsi que de ses connaissances de ce magnifique pays qu'est le Sénégal. Cela fait toujours peur de faire une avance, surtout pour des montants assez importants, à quelqu'un qu'on ne connait pas à des milliers de kilomètres, mais là, vous pouvez y aller les yeux fermés.
+Merci Kali </p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">J</div>
+          <div>
+            <strong>James Lefevre</strong>
+            <span> Google</span>
+          </div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>Un grand merci à kali  et à son équipe (Bacary,  Félix le chauffeur et bien d’autres) pour nous avoir fait découvrir le Sénégal . Nous avons eu la chance d’être en petit comité  de 4 et 5 personnes  ( voitures très confortables).  Nous avons passé de très bons moments en leurs compagnies  et nous avons visité de très beaux endroits . ( île aux coquillages , réserve de Bandia, baobab sacré  , île de Gorée , Dakar, et le lac rose où nous avons fait un mini rallye dans les dunes et le long de la plage ). Souvenir inoubliable.  Encore merci</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">J</div>
+          <div>
+            <strong>Johanne Decottignies</strong>
+            <span> Google</span>
+          </div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>Kali nous a été recommandé par notre agent de voyage. Nous sommes ravis des excursions faites avec lui et son équipe.
+        Les excursions sont encadrées par un duo guide + chauffeur. Félix est très bon conducteur, prudent et sympa. Kali avec qui nous avons fait 3 excursions et Sakari une excursion sont pro, compétents, attentionnés et très sympas. Les prix sont très corrects. Nous comptons retourner au Sénégal dès que possible et nous referons appel sans hésiter à Kali pour nos excursions.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">N</div>
+          <div>
+            <strong>Nathalie Scaillet</strong>
+            <span> Google</span>
+          </div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>Un immense merci à Kali de Kali Excursions pour avoir rendu notre séjour au Sénégal (du 7 au 16 août) aussi riche et mémorable ! Nous étions en famille, et grâce à lui, nous avons découvert des lieux magnifiques, tout en nous sentant accompagnés avec gentillesse, professionnalisme et bienveillance. Kali a su s’adapter à notre rythme et créer une ambiance chaleureuse tout au long du voyage. Une très belle rencontre humaine que nous n’oublierons pas !</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">N</div>
+          <div>
+            <strong>Nathalie D</strong>
+            <span> Google</span>
+          </div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>Je tenais à remercier Kalidou pour cette magnifique semaine passée au Sénégal à tes côtés.
+Tu es bien plus qu’un guide : tu es un homme profondément bon, avec de vraies valeurs, toujours prêt à tout pour faire de notre voyage une réussite.
+Les enfants et moi-même avons appris énormément de choses et fait de magnifiques découvertes sur notre pays. Nous n’avons qu’une seule envie : revenir !
+Merci pour tout, Kalidou. Comme le disent mes enfants : « Tonton Kalidou, c’est le meilleur ! »
+À toutes les familles, je vous le recommande à 10 000 % 🤲🏿✨</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">F</div>
+          <div>
+            <strong>Funty Soumaré</strong>
+            <span> Google</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-nav" id="reviews-nav"></div>
+  </section>
+  
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+         <img src="logo.png" alt="logo" width="50px">
+        <span class="brand-icon">✦</span>
+        <span class="brand-name">KaliExcursions<span>Sénégal</span></span>
+        <p>Excursions authentiques au Sénégal<br/>depuis Mbour et Somone</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="Excursion.html">Excursions</a></li>
+          <li><a href="Circuit.html">Circuits</a></li>
+          <li><a href="Galerie.html">Galerie</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Excursions</h4>
+        <ul>
+          <li><a href="Excursion.html">Île de Gorée</a></li>
+          <li><a href="Excursion.html">Sine-Saloum</a></li>
+          <li><a href="Excursion.html">Désert Lompoul</a></li>
+          <li><a href="Excursion.html">Safari Bandia</a></li>
+          <li><a href="Excursion.html">Saint-Louis</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>+221 77 614 76 34</p>
+        <p>kalidou.kandji.senegal@gmail.com</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 kaliExcursionSenegal – Tous droits réservés</p>
+      <div class="p">
+          <P>CE SITE WEB A ETE CONCU PAR AK VISION TECH </P>
+      </div>
+     
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FAB -->
+  <a href="https://wa.me/221776147634" class="whatsapp-fab" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

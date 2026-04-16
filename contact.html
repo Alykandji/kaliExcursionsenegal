@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – KaliExcursionsSénégal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span>&#128222; +221 77 614 76 34</span>
+      <span>&#9993;&#65039; kalidou.kandji.senegal@gmail.com</span>
+      <span>&#128205; Somone &middot; Mbour &middot; S&eacute;n&eacute;gal</span>
+    </div>
+    <div class="topbar-socials">
+      <a href="#" aria-label="Facebook">FB</a>
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="https://wa.me/221774519866" aria-label="WhatsApp" target="_blank">WA</a>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">&#10022;</span>
+        <img src="logo.png" alt="logo" width="50px">
+      <span class="brand-name">KaliExcursions<span>Sénégal</span></span>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html"    class="nav-link">Accueil</a></li>
+      <li><a href="Excursion.html" class="nav-link">Excursions</a></li>
+      <li><a href="Circuit.html"   class="nav-link">Circuits</a></li>
+      <li><a href="Galerie.html"          class="nav-link">Galerie</a></li>
+      <li><a href="index.html#apropos"    class="nav-link">A propos</a></li>
+      <li><a href="contact.html"          class="nav-link active btn-contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO CONTACT -->
+  <header class="contact-hero">
+    <div class="contact-hero-bg"></div>
+    <div class="contact-hero-overlay"></div>
+    <div class="contact-hero-content">
+      <span class="section-tag">Parlons de votre voyage</span>
+      <h1>Contactez <em>Nous</em></h1>
+      <p>Votre message arrive directement dans notre bo&icirc;te email. R&eacute;ponse garantie en moins de 24h.</p>
+    </div>
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="index.html">Accueil</a><span>&rsaquo;</span><span>Contact</span>
+    </nav>
+  </header>
+
+  <!-- BANDE INFOS RAPIDES -->
+  <div class="quick-band">
+    <div class="quick-item">
+      <span class="q-icon">&#128222;</span>
+      <div><strong>T&eacute;l&eacute;phone</strong><a href="tel:+221776147634">+221 77 614 76 34</a></div>
+    </div>
+    <div class="quick-sep"></div>
+    <div class="quick-item">
+      <span class="q-icon">&#9993;&#65039;</span>
+      <div><strong>Email</strong><a href="mailto:kalidou.kandji.senegal@gmail.com">kalidou.kandji.senegal@gmail.com</a></div>
+    </div>
+    <div class="quick-sep"></div>
+    <div class="quick-item">
+      <span class="q-icon">&#128336;</span>
+      <div><strong>Disponible</strong><span>7j/7 &middot; 24h/24</span></div>
+    </div>
+    <div class="quick-sep"></div>
+    <div class="quick-item">
+      <span class="q-icon">&#128172;</span>
+      <div><strong>WhatsApp</strong><a href="https://wa.me/221776147634" target="_blank">Ecrire maintenant</a></div>
+    </div>
+  </div>
+
+  <!-- CORPS -->
+  <main class="contact-body">
+
+    <!-- FORMULAIRE -->
+    <section class="form-section">
+
+      <div class="form-intro">
+        <h2>Envoyez votre demande</h2>
+        <p>Remplissez le formulaire ci-dessous. Votre message sera envoy&eacute; instantan&eacute;ment
+          &agrave; <strong>kalidou.kandji.senegal@gmail.com</strong>.</p>
+      </div>
+
+      <form id="contact-form" novalidate>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="prenom">Pr&eacute;nom <span class="req">*</span></label>
+            <input type="text" id="prenom" name="prenom" placeholder="Votre pr&eacute;nom" required />
+            <span class="field-err" id="err-prenom">Champ obligatoire</span>
+          </div>
+          <div class="form-group">
+            <label for="nom">Nom <span class="req">*</span></label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+            <span class="field-err" id="err-nom">Champ obligatoire</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+            <span class="field-err" id="err-email">Adresse email invalide</span>
+          </div>
+          <div class="form-group">
+            <label for="telephone">T&eacute;l&eacute;phone / WhatsApp</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="+221 77 100 22 32 " />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pays">Pays d'origine</label>
+            <select id="pays" name="pays">
+              <option value="">-- Votre pays --</option>
+              <option>France</option><option>Belgique</option><option>Suisse</option>
+              <option>Canada</option><option>S&eacute;n&eacute;gal</option><option>Italie</option>
+              <option>Espagne</option><option>Allemagne</option><option>Etats-Unis</option>
+              <option>Royaume-Uni</option><option>Maroc</option><option>Cote d'Ivoire</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="excursion">Excursion souhait&eacute;e <span class="req">*</span></label>
+            <select id="excursion" name="excursion" required>
+              <option value="">-- Choisir une excursion --</option>
+              <option>Dakar &amp; Ile de Gor&eacute;e</option>
+              <option>Iles du Sine-Saloum en pirogue</option>
+              <option>Arriv&eacute;e des p&ecirc;cheurs de M'bour</option>
+              <option>Safari Bandia &amp; Ranch des Lions</option>
+              <option>D&eacute;sert de Lompoul (nuit incluse)</option>
+              <option>Saint-Louis Coloniale</option>
+              <option>Ile aux Coquillages</option>
+              <option>Circuit sur mesure</option>
+              <option>Autre / Je ne sais pas encore</option>
+            </select>
+            <span class="field-err" id="err-excursion">Veuillez choisir</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="personnes">Nombre de personnes</label>
+            <input type="number" id="personnes" name="personnes" min="1" max="50" placeholder="Ex : 2" />
+          </div>
+          <div class="form-group">
+            <label for="date_voyage">Date souhait&eacute;e</label>
+            <input type="date" id="date_voyage" name="date_voyage" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message <span class="req">*</span></label>
+          <textarea id="message" name="message" rows="5"
+            placeholder="D&eacute;crivez votre projet de voyage, vos questions, vos attentes..." required></textarea>
+          <span class="field-err" id="err-message">Message obligatoire</span>
+          <span class="char-count" id="char-count">0 / 800</span>
+        </div>
+
+        <!-- Anti-spam honeypot invisible -->
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <button type="submit" class="btn-send" id="btn-send">
+          <span class="send-normal">&#9993;&#65039; &nbsp;Envoyer ma demande</span>
+          <span class="send-loading">
+            <svg viewBox="0 0 24 24" class="spin-icon" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="12" r="9" stroke-dasharray="28 56"/>
+            </svg>
+            Envoi en cours...
+          </span>
+        </button>
+
+        <p class="form-notice">&#128274; Vos donn&eacute;es sont confidentielles et utilis&eacute;es uniquement pour traiter votre demande.</p>
+      </form>
+
+      <!-- MESSAGE SUCCES -->
+      <div class="success-box" id="success-box">
+        <div class="success-icon-big">&#9989;</div>
+        <h3>Message envoy&eacute; avec succ&egrave;s !</h3>
+        <p>Merci <strong id="success-name"></strong> ! Votre demande a bien &eacute;t&eacute; re&ccedil;ue
+          &agrave; <strong>kalidou.kandji.senegal@gmail.com</strong>.</p>
+        <p>Nous vous r&eacute;pondrons dans les <strong>24 heures</strong>. En attendant, vous pouvez nous joindre directement sur WhatsApp.</p>
+        <div class="success-btns">
+          <a href="https://wa.me/221774519866?text=Bonjour%2C%20je%20viens%20d%27envoyer%20une%20demande%20via%20le%20site."
+             class="btn-whatsapp" target="_blank">&#128172; WhatsApp</a>
+          <button class="btn-outline-gold" id="btn-nouveau">&#8617; Nouvelle demande</button>
+        </div>
+      </div>
+
+      <!-- MESSAGE ERREUR -->
+      <div class="error-box" id="error-box">
+        &#9888;&#65039; Erreur lors de l'envoi. Contactez-nous directement sur WhatsApp ou
+        &agrave; l'adresse kalidou.kandji.senegal@gmail.com
+      </div>
+
+    </section>
+
+    <!-- COLONNE DROITE -->
+    <aside class="contact-aside">
+
+      <!-- Coordonnees -->
+      <div class="aside-card">
+        <h3>&#128204; Nos coordonn&eacute;es</h3>
+        <ul class="coords-list">
+          <li>
+            <span class="c-ico">&#128222;</span>
+            <div><strong>T&eacute;l&eacute;phone / WhatsApp</strong>
+              <a href="tel:++221776147634">++221 77 614 76 34</a></div>
+          </li>
+          <li>
+            <span class="c-ico">&#9993;&#65039;</span>
+            <div><strong>Email</strong>
+              <a href="mailto:kalidou.kandji.senegal@gmail.com">kalidou.kandji.senegal@gmail.com</a></div>
+          </li>
+          <li>
+            <span class="c-ico">&#128205;</span>
+            <div><strong>Adresse</strong>
+              <span>Somone &middot; Mbour<br/>Petite C&ocirc;te, S&eacute;n&eacute;gal</span></div>
+          </li>
+          <li>
+            <span class="c-ico">&#128336;</span>
+            <div><strong>Horaires</strong>
+              <span>Lundi &ndash; Dimanche<br/>8h00 &ndash; 23h00</span></div>
+          </li>
+        </ul>
+        <a href="https://wa.me/221776147634?text=Bonjour%20Teranga%20Voyages%2C%20je%20souhaite%20un%20devis%20pour%20une%20excursion."
+           class="btn-whatsapp full-w" target="_blank">
+          &#128172; &Eacute;crire sur WhatsApp
+        </a>
+      </div>
+
+      <!-- CARTE GOOGLE MAPS SENEGAL / MBOUR / SOMONE -->
+      <div class="aside-card map-card">
+        <div class="map-head">
+          <h3>&#128506;&#65039; Mbour &middot; Somone &middot; S&eacute;n&eacute;gal</h3>
+          <a href="https://maps.google.com/?q=Somone,Senegal" target="_blank" class="map-ext">Ouvrir Google Maps &#8599;</a>
+        </div>
+        <div class="map-wrap">
+          <iframe
+            title="Carte Mbour Somone Senegal – Teranga Voyages"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124165.87654321!2d-16.9780!3d14.4167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec16f7f4e5b8f29%3A0x8d3d5b6f7e8a9b12!2sSomone%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2sfr!4v1710000000003!5m2!1sfr!2sfr"
+            width="100%"
+            height="340"
+            style="border:0; display:block; border-radius:8px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="map-legend">
+          <div class="legend-item"><span class="ldot gold"></span> Somone</div>
+          <div class="legend-item"><span class="ldot red"></span> Mbour</div>
+        </div>
+      </div>
+
+    </aside>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-icon">&#10022;</span>
+         <img src="logo.png" alt="logo" width="50px">
+        <span class="brand-name">KaliExcursions<span>Senegal</span></span>
+        <p>Excursions authentiques au S&eacute;n&eacute;gal<br/>depuis Thi&egrave;s et Somone</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="Excursion.html">Excursions</a></li>
+          <li><a href="Galerie.html">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Excursions</h4>
+        <ul>
+          <li><a href="Excursion.html">Ile de Gor&eacute;e</a></li>
+          <li><a href="Excursion.html">Sine-Saloum</a></li>
+          <li><a href="Excursion.html">D&eacute;sert Lompoul</a></li>
+          <li><a href="Excursion.html">Safari Bandia</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>+221 77 614 76 34</p>
+        <p>kalidou.kandji.senegal@gmail.com</p>
+        <div class="footer-socials">
+          <a href="#">FB</a><a href="#">IG</a>
+          <a href="https://wa.me/221776147634" target="_blank">WA</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 KaliExcursionsSenegal &ndash; Tous droits r&eacute;serv&eacute;s</p>
+       <P>LE SITE WEB A ETE CONCU PAR AK VISION TECH </P>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FAB -->
+  <a href="https://wa.me/776147634" class="whatsapp-fab" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>
